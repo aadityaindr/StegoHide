@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+
+    
+</head>
+<body>
+    <h2 class="input-heading">Enter text to hide in image</h2>
+<textarea rows="4" cols="40" class="content input-box" placeholder="Enter text to hide"></textarea>
+
+<label for="files" class="labelFiles">Choose File</label>
+<input type="file" id="files" style="display:none;" />
+
+        
+    </h2>
+    
+    <div class="options">
+        <button class="encrypt"><h2>Hide the message</h2></button>
+        <button class="extract"><h2>Extract message</h2></button>
+    </div>
+    
+
+    <!-- part for encryption -->
+    <div class="result">
+        <div class="cols">
+            <h2>Before Modification</h2>
+            <img src="" class="originalImage" alt="Original Image">
+        </div>
+        <div class="cols">
+            <h2>After Modification</h2>
+            <canvas id="imageCanvas"></canvas>
+        </div>
+    </div>
+    
+    
+    <button class="download hidden" download>
+        <h2>DOWNLOAD</h2>
+    </button>
+    
+
+
+    <!-- part for data extraction -->
+   <div class="data-extracted hidden">
+		<h2>Selected image</h2>
+		<canvas id="imageCanvas2" ></canvas>
+		<h2>Hidden data</h2>
+		<div class="notice" style="color:red; display:none">
+			no hidden data / (make sure you are using the downloded file for extraction)
+		</div>
+		<textarea rows="4" cols="40" class="extracted-item" placeholder="hidden data" style="resize: none;"></textarea>
+	</div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

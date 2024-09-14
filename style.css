@@ -1,0 +1,185 @@
+/* General body styles */
+body {
+    
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.responsive-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 650px; /* Set maximum height to avoid excessive scaling */
+    object-fit: cover; /* Ensure image covers the container */
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+/* Styling for images */
+img, canvas {
+    height: 300px;
+    width: 300px;
+    
+    border: none;
+    background-color: transparent;
+}
+
+.originalImage {
+    margin: 20px;
+}
+
+/* Styling for canvas */
+.imageCanvas {
+    background-color: aliceblue;
+}
+
+/* Result container */
+.result {
+    display: none;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Columns for results */
+.cols {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Responsive behavior for smaller screens */
+@media screen and (max-width: 650px) {
+    .result {
+        flex-direction: column;
+    }
+}
+
+/* Styling for buttons */
+
+
+/* Typing effect */
+.typing-effect {
+    color: rgb(0, 0, 0);
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Ensure text doesn't wrap */
+    overflow: hidden; /* Hide the overflowing text */
+    border-right: 2px solid; /* Simulate a typing cursor */
+    max-width: 0; /* Start with 0 width */
+    animation: typing 5s steps(24, end) forwards, blink 0.75s step-end infinite; /* Adjust steps based on text length */
+    text-align: left; /* Left-align the text */
+}
+
+/* Typing effect animation */
+@keyframes typing {
+    from {
+        max-width: 0; /* Start with no text visible */
+    }
+    to {
+        max-width: 100%; /* Expand to show the full text */
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(10, 0, 0);
+    }
+}
+.img-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Ensure that the h2 is left-aligned */
+/* Style for the History of Steganography heading */
+
+
+/* Optional: Responsive design adjustments */
+@media screen and (max-width: 600px) {
+    .hist {
+        font-size: 2rem; /* Adjust font size on smaller screens */
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+}
+
+/* Style for the steganography text */
+.steganography-text {
+    font-family: 'Merriweather', serif; /* Use an attractive serif font */
+    font-size: 1.1rem; /* Adjust the size for readability */
+    line-height: 1.6; /* Increase line spacing for better readability */
+    color: #444; /* Dark grey color for text */
+    background-color: #f9f9f9; /* Light background to make text stand out */
+    padding: 20px; /* Padding inside the text block */
+    margin-left: 10%; /* Gap from the left */
+    margin-right: 10%; /* Gap from the right */
+    border-left: 5px solid #4CAF50; /* Add a decorative border to the left */
+    border-radius: 8px; /* Rounded corners for the text block */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    text-align: justify; /* Justify text alignment */
+}
+
+/* Ensure the font is available by importing it */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+
+
+/* Optional: Responsive design adjustments */
+@media screen and (max-width: 600px) {
+    .steganography-text {
+        font-size: 1rem; /* Adjust font size on smaller screens */
+        padding: 15px; /* Adjust padding on smaller screens */
+    }
+}
+.btn {
+    display: inline-block;
+    font-family: 'Merriweather', serif; /* Use the same font as the text for consistency */
+    font-size: 1.2rem;
+    color: white; /* Button text color */
+    background-color: #0b19b3; /* Green background color */
+    padding: 12px 24px; /* Padding around the button */
+    border: none; /* Remove any border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from the link */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #d20f0f; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift button slightly on hover */
+}
+
+.btn:active {
+    background-color: #9d0b8e; /* Even darker when pressed */
+    transform: translateY(0); /* Reset position when clicked */
+}
+
+/* Ensure the font is available by importing it */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+
+
+/* style.css */

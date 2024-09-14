@@ -1,0 +1,271 @@
+/* style.css */
+body {
+    background-image: url('https://www.tecsec.co.uk/wp-content/uploads/Steganography-Thumbnail.png');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+h2 {
+    color: white; /* Adjust text color to contrast with the background */
+}
+
+textarea, input[type="file"], button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    max-width: 400px;
+}
+.extracted-item {
+    width: 100%;
+    max-width: 500px; /* Maximum width for better responsiveness */
+    padding: 12px; /* Padding inside the textarea */
+    font-size: 1rem; /* Font size for readability */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color for readability */
+    resize: none; /* Prevents resizing */
+    margin: 0 auto; /* Center align the textarea */
+    display: block; /* Ensures block display */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.extracted-item:focus {
+    outline: none; /* Remove default outline */
+    border-color: #007bff; /* Highlight border color on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Enhanced shadow on focus */
+}
+
+
+
+.result, .data-extracted {
+    color: white;
+}
+/* Improved heading style */
+.input-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+
+/* Style for options container */
+.options {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align items horizontally */
+    gap: 10px; /* Add space between buttons */
+    margin: 20px 0; /* Adjust margin if needed */
+}
+
+/* Button Styling */
+button {
+    font-size: 14px; /* Decrease font size */
+    padding: 8px 16px; /* Adjust padding for smaller button size */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Slightly rounded corners */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure h2 inside buttons is also smaller */
+button h2 {
+    font-size: 1rem; /* Adjust font size of the h2 inside buttons */
+    margin: 0; /* Remove default margin of h2 */
+}
+button:focus {
+    outline: none;
+}
+
+
+/* Data extracted section */
+.data-extracted {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+@media screen and (max-width: 600px) {
+    .hist {
+        font-size: 2rem; /* Adjust font size on smaller screens */
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+}
+
+
+/* Improving button styles for consistency */
+
+
+/* General styles for the body */
+
+
+/* Improved text area style */
+.input-box {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto 20px auto;
+    display: block;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+/* Improved label style */
+.labelFiles {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Hover effect */
+.labelFiles:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Focus effect for better accessibility */
+.labelFiles:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Active state when clicking */
+.labelFiles:active {
+    background-color: #004085;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+.imageCanvas {
+    background-color: aliceblue;
+}
+
+/* Result container */
+.result {
+    display: none; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the columns */
+    flex-wrap: wrap; /* Allow wrapping to fit on smaller screens */
+    gap: 20px; /* Space between columns */
+    padding: 20px; /* Padding around the result container */
+}
+
+.cols {
+    flex: 1; /* Allow columns to grow and shrink */
+    max-width: 100%; /* Ensure columns do not exceed the container width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+img.originalImage, canvas {
+    max-width: 100%; /* Prevent image and canvas from exceeding the width of their container */
+    max-height: 400px; /* Limit height to a maximum value to prevent overflow */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+    margin: 0 auto; /* Center the image or canvas within its container */
+    border: 1px solid #ddd; /* Optional border for better visualization */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+
+/* Responsive behavior for smaller screens */
+@media screen and (max-width: 650px) {
+    .result {
+        flex-direction: column;
+    }
+}
+/* Hide the element by default */
+/* Hide the element by default */
+.hidden {
+    display: none; /* Hides the element from the page */
+}
+
+/* General button styles to avoid conflicts */
+button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Specific styles for the download button */
+button.download {
+    font-size: 14px; /* Adjust the font size for the download button text */
+    padding: 8px 16px; /* Adjust the padding inside the button */
+    background-color: #007bff; /* Green background color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button.download:hover {
+    background-color: #3a158c; /* Darker green background on hover */
+}
+
+button.download h2 {
+    font-size: 1rem; /* Adjust font size for the h2 inside the button */
+    margin: 0; /* Remove default margin from h2 */
+}
+
+/* Specific styles for other buttons, if needed */
+button.encrypt, button.extract {
+    background-color: #007BFF; /* Blue background color for other buttons */
+    color: white;
+}
+
+button.encrypt:hover, button.extract:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+}
